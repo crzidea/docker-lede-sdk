@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 docker build -t crzidea/openwrt .
-docker run --rm -it -v $PWD/.dist:/dist crzidea/openwrt bash
+docker run --rm -it -v $PWD/.packages:/packages crzidea/openwrt bash
