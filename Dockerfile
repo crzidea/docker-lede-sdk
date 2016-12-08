@@ -14,8 +14,9 @@ RUN set -x \
     && rm $OPENWRT_SDK_FILENAME \
     && mv OpenWrt-SDK-* openwrt
 
-RUN cd openwrt \
-    && ./scripts/feeds update packages
+WORKDIR /openwrt
+
+RUN ./scripts/feeds update packages
 
 #COPY docker-entrypoint.sh /
 #ENTRYPOINT ["/docker-entrypoint.sh"]
