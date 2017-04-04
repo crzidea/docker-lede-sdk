@@ -1,20 +1,19 @@
-# docker-openwrt
+# docker-lede-sdk
 
-An environment for compiling OpenWRT packages that just works!
+An environment for compiling LEDE packages that just works!
 
 ## Example: Complile `shadowsocks-libev`
 
 - Setup a container:
 
   ```sh
-  docker run --rm -it crzidea/openwrt bash
+  docker run --rm -it crzidea/lede-sdk bash
   ```
   
 - Run command in container:
 
   ```sh
   apt install ccache
-  cd /openwrt
   ./scripts/feeds install libpcre
   git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks-libev
   make menuconfig
